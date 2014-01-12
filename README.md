@@ -1,7 +1,8 @@
 ﻿# ASP.NET MVC 5 Mixed Authentication
-(Web Forms + Windows) 
+Mixing Windows and Forms Authentication (Windows + Forms) 
 
 ![Login](https://raw2.github.com/MohammadYounes/MVC5-MixedAuth/screens/screens/Login.PNG)
+
 
 #### How its done ?
 
@@ -21,10 +22,9 @@ The basic idea is to have a managed handler to perform windows authentication, t
 
 ####Enabling Windows Authentication on IIS Express.
 
-* From Solution Explorer, select MixedAuth project then press F4 to view Project Properties.
-* Make sure "Windows Authentication" is enabled.
+* From Solution Explorer, select MixedAuth project then press F4 to view Project Properties and  Make sure "Windows Authentication" is enabled.
 
-![IIS Express](https://raw2.github.com/MohammadYounes/MVC5-MixedAuth/screens/screens/WinAuth.Enabled.PNG)
+      ![IIS Express](https://raw2.github.com/MohammadYounes/MVC5-MixedAuth/screens/screens/WinAuth.Enabled.PNG)
 
 
 
