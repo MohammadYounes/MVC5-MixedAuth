@@ -20,7 +20,7 @@ The basic idea is to have a managed handler to perform windows authentication, t
 * Open the solution using Visual Studio, build and run.
 
 
-####Enabling Windows Authentication on IIS Express.
+#### Enabling Windows Authentication on IIS Express.
 
 * From Solution Explorer, select MixedAuth project then press F4 to view Project Properties and  Make sure "Windows Authentication" is enabled.
 
