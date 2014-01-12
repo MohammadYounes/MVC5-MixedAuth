@@ -28,5 +28,5 @@ The basic idea is to have a managed handler to perform windows authentication, t
 
 
 
-> Please [share any issues](https://github.com/MohammadYounes/MixedAuth/issues?state=open) you may have.
+##### Please [share any issues](https://github.com/MohammadYounes/MVC5-MixedAuth/issues?state=open) you may have.
 
