@@ -27,6 +27,32 @@ The basic idea is to have a managed handler to perform windows authentication, t
       ![IIS Express](https://raw2.github.com/MohammadYounes/MVC5-MixedAuth/screens/screens/WinAuth.Enabled.PNG)
 
 
+#### Importing AD Groups as Role Claims:
+
+ All AD groups asscociated with the user windows account are available when you hit the [WindowsLogin Action], you can fetch all of them by iterating over `Request.LogonUserIdentity.Claims`:
+
+
+``` C#
+private void MapGroupSidToRoleClaims(ApplicationUser user)
+{
+  foreach (var claim in Request.LogonUserIdentity.Claims)
+  {
+    if (claim.Type == ClaimTypes.GroupSid)
+      user.Claims.Add(
+        new IdentityUserClaim()
+        {
+          ClaimType = ClaimTypes.Role,
+          ClaimValue = new SecurityIdentifier(claim.Value)
+                             .Translate(typeof(NTAccount)).ToString()
+        });
+  }
+}
+```
+
+[WindowsLogin Action]: https://github.com/MohammadYounes/MVC5-MixedAuth/blob/master/src/Controllers/AccountController.Windows.cs#L38
+
+
+------
 
 ##### Please [share any issues](https://github.com/MohammadYounes/MVC5-MixedAuth/issues?state=open) you may have.
 
