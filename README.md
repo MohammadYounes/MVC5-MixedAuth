@@ -29,7 +29,7 @@ The basic idea is to have a managed handler to perform windows authentication, t
 
 #### Importing AD Groups as Role Claims:
 
- All AD groups asscociated with the user windows account are available when you hit the [WindowsLogin Action], you can fetch all of them by iterating over `Request.LogonUserIdentity.Claims`:
+ All AD groups asscociated with the user windows account are available when you hit the [WindowsLogin Action], you can fetch all of them by iterating over `Request.LogonUserIdentity.Groups`:
 
 
 ``` C#
