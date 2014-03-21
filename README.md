@@ -33,19 +33,15 @@ The basic idea is to have a managed handler to perform windows authentication, t
 
 
 ``` C#
-private void MapGroupSidToRoleClaims(ApplicationUser user)
+private void MapGroupsToRoleClaims(ApplicationUser user)
 {
-  foreach (var claim in Request.LogonUserIdentity.Claims)
-  {
-    if (claim.Type == ClaimTypes.GroupSid)
-      user.Claims.Add(
-        new IdentityUserClaim()
-        {
-          ClaimType = ClaimTypes.Role,
-          ClaimValue = new SecurityIdentifier(claim.Value)
-                             .Translate(typeof(NTAccount)).ToString()
-        });
-  }
+  foreach (var group in Request.LogonUserIdentity.Groups)  
+    user.Claims.Add(new IdentityUserClaim()
+    {
+      ClaimType = ClaimTypes.Role,
+      ClaimValue = new SecurityIdentifier(group.Value)
+                         .Translate(typeof(NTAccount)).Value
+    });
 }
 ```
 
@@ -55,4 +51,3 @@ private void MapGroupSidToRoleClaims(ApplicationUser user)
 ------
 
 ##### Please [share any issues](https://github.com/MohammadYounes/MVC5-MixedAuth/issues?state=open) you may have.
-
