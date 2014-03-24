@@ -27,5 +27,10 @@ namespace MixedAuth.Controllers
 
       return View();
     }
+    [AllowAnonymous()]
+    public ActionResult WebApi()
+    {
+      return View();
+    }
   }
 }
