@@ -15,7 +15,7 @@ The basic idea is to have a managed handler to perform windows authentication, t
 
 > No special requirements! Visual Studio Express 2013 is all you need.
 
-* Clone the repository: ```git clone git@github.com:MohammadYounes/MixedAuth.git```
+* Clone the repository: ```git clone git@github.com:MohammadYounes/MVC5-MixedAuth.git```
 
 * Open the solution using Visual Studio, build and run.
 
