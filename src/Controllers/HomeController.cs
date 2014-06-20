@@ -6,7 +6,6 @@ using System.Web.Mvc;
 
 namespace MixedAuth.Controllers
 {
-  [Authorize]
   public class HomeController : Controller
   {
     public ActionResult Index()
@@ -14,13 +13,14 @@ namespace MixedAuth.Controllers
       return View();
     }
 
+    [Authorize]
     public ActionResult About()
     {
       ViewBag.Message = "Your application description page.";
 
       return View();
     }
-
+    [Authorize]
     public ActionResult Contact()
     {
       ViewBag.Message = "Your contact page.";

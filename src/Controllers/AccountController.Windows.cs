@@ -24,10 +24,9 @@ namespace MixedAuth.Controllers
   public partial class AccountController : Controller
   {
     //
-    // POST: /Account/WindowsLogin
+    // GET,POST: /Account/WindowsLogin
     [AllowAnonymous]
-    [ValidateAntiForgeryToken]
-    [HttpPost]
+    [AcceptVerbs(HttpVerbs.Get | HttpVerbs.Post)]
     public async Task<ActionResult> WindowsLogin(string userName, string returnUrl)
     {
       if (!Request.LogonUserIdentity.IsAuthenticated)
