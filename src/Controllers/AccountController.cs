@@ -13,7 +13,7 @@ using MixedAuth.Models;
 namespace MixedAuth.Controllers
 {
     [Authorize]
-    public class AccountController : Controller
+    public partial class AccountController : Controller
     {
         private ApplicationUserManager _userManager;
 

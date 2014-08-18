@@ -10,6 +10,11 @@ namespace MixedAuth
 {
     public class MvcApplication : System.Web.HttpApplication
     {
+        public MvcApplication()
+        {
+            this.RegisterWindowsAuthentication();
+        }
+
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
