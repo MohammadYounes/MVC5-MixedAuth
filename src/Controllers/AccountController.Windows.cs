@@ -50,7 +50,8 @@ namespace MixedAuth.Controllers
                 // If the user does not have an account, then prompt the user to create an account
                 var name = userName;
                 if (string.IsNullOrEmpty(name))
-                    name = Request.LogonUserIdentity.Name.Split('\\')[1];
+                    name = string.Join("@", Request.LogonUserIdentity.Name.Split('\\').Reverse().ToArray());
+
                 var appUser = new ApplicationUser() { UserName = name, Email = email };
                 var result = await UserManager.CreateAsync(appUser);
                 if (result.Succeeded)
