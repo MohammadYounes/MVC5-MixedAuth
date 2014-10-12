@@ -52,6 +52,13 @@ private void MapGroupsToRoleClaims(ApplicationUser user)
 [WindowsLogin Action]: https://github.com/MohammadYounes/MVC5-MixedAuth/blob/master/src/Controllers/AccountController.Windows.cs#L38
 
 
+
+##### Flowchart of the Windows Login / Link code flow (Contributed by [@ComboFusion](https://github.com/ComboFusion))
+
+
+![mixedauth-windowsloginhandler](https://cloud.githubusercontent.com/assets/371709/4605670/e765e5ca-51f2-11e4-8f63-328cd456d120.jpg)
+
+
 ------
 
 ##### Please [share any issues](https://github.com/MohammadYounes/MVC5-MixedAuth/issues?state=open) you may have.
