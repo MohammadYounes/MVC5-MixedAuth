@@ -3,6 +3,10 @@ Mixing Windows and Forms Authentication (Windows + Forms)
 
 ![Login](https://raw2.github.com/MohammadYounes/MVC5-MixedAuth/screens/screens/Login.PNG)
 
+
+# Now available as OWIN middleware - [OWIN-MixedAuth](https://github.com/MohammadYounes/Owin-MixedAuth).
+
+
 ### Visual Studio Update 3
 
 A new updated branch is available [here](https://github.com/MohammadYounes/MVC5-MixedAuth/tree/Update3). Also view [this comparison](https://github.com/MohammadYounes/MVC5-MixedAuth/compare/0544d70937035c6d220520c76c4e3a7df20afe28...Update3) for the list of changes required to add Mixed Authentication support.
