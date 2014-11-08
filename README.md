@@ -1,7 +1,7 @@
 # ASP.NET MVC 5 Mixed Authentication
 Mixing Windows and Forms Authentication (Windows + Forms) 
 
-![Login](https://raw2.github.com/MohammadYounes/MVC5-MixedAuth/screens/screens/Login.PNG)
+![Login](https://raw.githubusercontent.com/MohammadYounes/MVC5-MixedAuth/screens/screens/Login.PNG)
 
 
 # Now available as OWIN middleware - [OWIN-MixedAuth](https://github.com/MohammadYounes/Owin-MixedAuth).
@@ -32,7 +32,7 @@ The basic idea is to have a managed handler to perform windows authentication, t
 
 * From Solution Explorer, select MixedAuth project then press F4 to view Project Properties and  Make sure "Windows Authentication" is enabled.
 
-      ![IIS Express](https://raw2.github.com/MohammadYounes/MVC5-MixedAuth/screens/screens/WinAuth.Enabled.PNG)
+      ![IIS Express](https://raw.githubusercontent.com/MohammadYounes/MVC5-MixedAuth/screens/screens/WinAuth.Enabled.PNG)
 
 
 #### Importing AD Groups as Role Claims:
