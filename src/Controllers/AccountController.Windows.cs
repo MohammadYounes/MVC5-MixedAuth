@@ -29,7 +29,7 @@ namespace MixedAuth.Controllers
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         [HttpPost]
-        public async Task<ActionResult> WindowsLogin(string userName,string email, string returnUrl)
+        public async Task<ActionResult> WindowsLogin(string email, string returnUrl)
         {
             if (!Request.LogonUserIdentity.IsAuthenticated)
             {
@@ -48,11 +48,10 @@ namespace MixedAuth.Controllers
             else
             {
                 // If the user does not have an account, then prompt the user to create an account
-                var name = userName;
-                if (string.IsNullOrEmpty(name))
-                    name = string.Join("@", Request.LogonUserIdentity.Name.Split('\\').Reverse().ToArray());
+                if (string.IsNullOrEmpty(email))
+                    email = Request.LogonUserIdentity.Name;
 
-                var appUser = new ApplicationUser() { UserName = name, Email = email };
+                var appUser = new ApplicationUser() { UserName = email, Email = email };
                 var result = await UserManager.CreateAsync(appUser);
                 if (result.Succeeded)
                 {
@@ -67,7 +66,7 @@ namespace MixedAuth.Controllers
                 AddErrors(result);
                 ViewBag.ReturnUrl = returnUrl;
                 ViewBag.LoginProvider = "Windows";
-                return View("WindowsLoginConfirmation", new WindowsLoginConfirmationViewModel { UserName = name });
+                return View("WindowsLoginConfirmation", new WindowsLoginConfirmationViewModel {Email = email });
             }
         }
 
