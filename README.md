@@ -1,10 +1,12 @@
 # ASP.NET MVC 5 Mixed Authentication
 Mixing Windows and Forms Authentication (Windows + Forms) 
+![Login](https://raw.githubusercontent.com/MohammadYounes/MVC5-MixedAuth/screens/screens/Login.PNG)
 
-#Announcement
+
+##Announcement
+
 This project is more of a proof of concept that makes mixed authentication appear as if its an external provider. I recommend using [OWIN-MixedAuth](https://github.com/MohammadYounes/Owin-MixedAuth), because its modular and works seamlessly with other authentication providers.
 
-![Login](https://raw.githubusercontent.com/MohammadYounes/MVC5-MixedAuth/screens/screens/Login.PNG)
 
 ### Visual Studio Update 3
 
