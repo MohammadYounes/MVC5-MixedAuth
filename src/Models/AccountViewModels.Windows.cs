@@ -1,4 +1,4 @@
-﻿// <copyright file="AccountViewModels.Windows.cs" auther="Mohammad Younes">
+﻿// <copyright file="AccountViewModels.Windows.cs" author="Mohammad Younes">
 // Copyright 2013 Mohammad Younes.
 // 
 // Released under the MIT license
@@ -14,11 +14,13 @@ using System.Web;
 
 namespace MixedAuth.Models
 {
-  public class WindowsLoginConfirmationViewModel
-  {
-    [Required]
-    [Display(Name = "User name")]
-    public string UserName { get; set; }
-  }
+    public class WindowsLoginConfirmationViewModel
+    {
+
+        [Required]
+        [EmailAddress]
+        [Display(Name = "Email")]
+        public string Email { get; set; }
+    }
 
 }

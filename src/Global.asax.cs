@@ -8,19 +8,19 @@ using System.Web.Routing;
 
 namespace MixedAuth
 {
-  public class MvcApplication : System.Web.HttpApplication
-  {
-    public MvcApplication()
+    public class MvcApplication : System.Web.HttpApplication
     {
-      this.RegisterWindowsAuthentication();
-    }
+        public MvcApplication()
+        {
+            this.RegisterWindowsAuthentication();
+        }
 
-    protected void Application_Start()
-    {
-      AreaRegistration.RegisterAllAreas();
-      FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-      RouteConfig.RegisterRoutes(RouteTable.Routes);
-      BundleConfig.RegisterBundles(BundleTable.Bundles);
+        protected void Application_Start()
+        {
+            AreaRegistration.RegisterAllAreas();
+            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
+        }
     }
-  }
 }
